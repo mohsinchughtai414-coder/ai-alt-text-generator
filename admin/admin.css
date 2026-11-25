@@ -1,0 +1,78 @@
+/* Live image processing display */
+
+.alt-generator-result {
+    max-width: 720px;
+    margin: 18px 0 24px;
+    padding: 16px 20px;
+    border: 1px solid #c3c4c7;
+    background: #fff;
+}
+
+/* Hide the display until an image has been processed */
+
+.alt-generator-result[hidden],
+.alt-generator-result img[hidden] {
+    display: none;
+}
+
+/* Image preview */
+
+#alt-generator-result-image {
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 12px 0;
+}
+
+/* Generated description */
+
+#alt-generator-result-description {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+/* Overview cards and consistent page navigation */
+.alt-generator-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    max-width: 850px;
+    margin: 24px 0;
+}
+.alt-generator-dashboard-card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+}
+.alt-generator-dashboard-card h2 { margin-top: 0; }
+.alt-generator-dashboard-card .button { margin-top: 10px; }
+
+/* Live countdown shown only between generated images. */
+.alt-generator-countdown {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+.alt-generator-countdown[hidden] { display: none; }
+.alt-generator-countdown-title { margin: 0 0 6px; }
+.alt-generator-countdown-time {
+    font-size: 32px;
+    line-height: 1.3;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+#alt-generator-countdown-bar {
+    display: block;
+    width: 100%;
+    height: 14px;
+    margin: 10px 0;
+}
+
+/* Persistent, actionable failed-image summary for the latest batch. */
+.alt-generator-failures { max-width: 720px; padding: 12px 18px; margin: 18px 0; background: #fff; border-left: 4px solid #d63638; }
+.alt-generator-failures[hidden] { display: none; }
+.alt-generator-failures li { margin-bottom: 8px; overflow-wrap: anywhere; }
